@@ -9,19 +9,17 @@ import SwiftUI
 import Combine
 
 struct UserDetailsScene: View {
-    
+
     let user: User
     @Environment(\.injected) private var injected: DIContainer
     @State private var details: Loadable<User.Details> = .notRequested
-    
-    let inspection = Inspection<Self>()
-    
+
     init(user: User) {
         self.user = user
     }
-    
+
     var body: some View {
-        HStack{
+        HStack {
             AsyncImage(url: user.avatar) { image in
                 image
                     .resizable()
@@ -51,48 +49,48 @@ struct UserDetailsScene: View {
         }
         Spacer()
     }
-    
-    var followerCountStr : String {
+
+    var followerCountStr: String {
         switch details {
-            case let .loaded(info):
-                guard let count = info.followers else {return ""}
-                return "\(count)"
-            default:
-                return ""
+        case let .loaded(info):
+            guard let count = info.followers else {return ""}
+            return "\(count)"
+        default:
+            return ""
         }
     }
-    
-    var repoCountStr : String {
+
+    var repoCountStr: String {
         switch details {
-            case let .loaded(info):
-                guard let count = info.publicRepos else {return ""}
-                return "\(count)"
-            default:
-                return ""
+        case let .loaded(info):
+            guard let count = info.publicRepos else {return ""}
+            return "\(count)"
+        default:
+            return ""
         }
     }
-    
-    var fullName : String {
+
+    var fullName: String {
         switch details {
-            case let .loaded(info):
-                return info.name ?? ""
-            default:
-                return ""
+        case let .loaded(info):
+            return info.name ?? ""
+        default:
+            return ""
         }
     }
-    
-    var userName : String {
+
+    var userName: String {
         switch details {
-            case let .loaded(info):
-                return info.userName ?? ""
-            default:
-                return ""
+        case let .loaded(info):
+            return info.userName ?? ""
+        default:
+            return ""
         }
     }
 }
 
 extension UserDetailsScene {
-    func loadUserDetails(user: User,details: LoadableSubject<User.Details>) {
+    func loadUserDetails(user: User, details: LoadableSubject<User.Details>) {
         injected.interactors.usersInteractor
             .loadDetails(userDetails: details, user: user)
     }
@@ -112,7 +110,7 @@ extension UserDetailsScene {
 }
 
 private extension UserDetailsScene {
-    var routingUpdate : AnyPublisher<Routing,Never> {
+    var routingUpdate: AnyPublisher<Routing, Never> {
         injected.appState.updates(for: \.routing.userDetails)
     }
 }

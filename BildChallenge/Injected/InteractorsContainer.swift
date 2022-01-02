@@ -10,11 +10,11 @@ import Foundation
 extension DIContainer {
     struct Interactors {
         let usersInteractor: UsersListInteractor
-        
-        init(usersInteractor: UsersListInteractor){
+
+        init(usersInteractor: UsersListInteractor) {
             self.usersInteractor = usersInteractor
         }
-        
+
         static var stub: Self {
             .init(usersInteractor: StubUsersListInteractor())
         }

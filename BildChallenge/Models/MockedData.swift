@@ -11,7 +11,7 @@ import Foundation
 
 extension User {
     static let mockedData: [User] = [
-        User(name: "User 1",userId: 1,avatar: URL(string:"https://avatars.githubusercontent.com/u/39451059?v=4"))
+        User(name: "User 1", userId: 1, avatar: URL(string: "https://avatars.githubusercontent.com/u/39451059?v=4"))
     ]
 }
 

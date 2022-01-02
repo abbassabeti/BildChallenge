@@ -9,23 +9,21 @@ import SwiftUI
 import Combine
 
 struct UsersListScene: View {
-    
+
     @State private var usersSearch = UsersSearch()
-    @State private(set) var users : Loadable<[User]>
+    @State private(set) var users: Loadable<[User]>
     @State private var routingState: Routing = .init()
     private var routingBinding: Binding<Routing> {
         $routingState.dispatched(to: injected.appState, \.routing.usersList)
     }
     @Environment(\.injected) private var injected: DIContainer
-    
-    let inspection = Inspection<Self>()
 
     init(users: Loadable<[User]> = .notRequested) {
         self._users = .init(initialValue: users)
     }
-    
+
     var body: some View {
-        GeometryReader { geometry in
+        GeometryReader { _ in
             NavigationView {
                 self.content
                     .navigationTitle("Users")
@@ -40,12 +38,12 @@ struct UsersListScene: View {
         }
     }
     private var content : some View {
-        VStack(alignment: .center){
+        VStack(alignment: .center) {
 //            Text("Users")
 //                .multilineTextAlignment(.center)
 //                .padding()
 //                .font(.title)
-                
+
             SearchBarView(text: $usersSearch.searchText
                 .onSet { _ in
                     self.reloadUsers()
@@ -57,16 +55,16 @@ struct UsersListScene: View {
         }
         .frame(maxHeight: .infinity)
     }
-    
+
     private var itemsView: AnyView {
         switch users {
         case .notRequested: return AnyView(notRequestedView)
         case let .isLoading(last, _): return AnyView(loadingView(last))
-        case let .loaded(countries): return AnyView(loadedView(countries, showSearch: true, showLoading: false))
+        case let .loaded(users): return AnyView(loadedView(users, showSearch: true, showLoading: false))
         case let .failed(error): return AnyView(failedView(error))
         }
     }
-    
+
 }
 
 private extension UsersListScene {
@@ -81,7 +79,7 @@ private extension UsersListScene {
     var notRequestedView: some View {
         Text("").onAppear(perform: reloadUsers)
     }
-    
+
     func loadingView(_ previouslyLoaded: [User]?) -> some View {
         if let users = previouslyLoaded {
             return AnyView(loadedView(users, showSearch: true, showLoading: true))
@@ -89,7 +87,7 @@ private extension UsersListScene {
             return AnyView(ActivityIndicatorView().padding())
         }
     }
-    
+
     func failedView(_ error: Error) -> some View {
         ErrorView(error: error, retryAction: {
             self.reloadUsers()
@@ -116,12 +114,12 @@ private extension UsersListScene {
             .id(users.count)
         }.padding(.bottom, bottomInset)
     }
-    
+
     func detailsView(user: User) -> UserDetailsScene {
-        print("going to fetch \(user.name)")
+        print("going to fetch \(String(describing: user.name))")
         return UserDetailsScene(user: user)
     }
-    
+
     var bottomInset: CGFloat {
         if #available(iOS 14, *) {
             return 0
@@ -145,11 +143,11 @@ extension UsersListScene {
 }
 
 private extension UsersListScene {
-    var routingUpdate: AnyPublisher<Routing,Never> {
+    var routingUpdate: AnyPublisher<Routing, Never> {
         injected.appState.updates(for: \.routing.usersList)
     }
-    
-    var keyboardHeightUpdate: AnyPublisher<CGFloat,Never> {
+
+    var keyboardHeightUpdate: AnyPublisher<CGFloat, Never> {
         injected.appState.updates(for: \.system.keyboardHeight)
     }
 }

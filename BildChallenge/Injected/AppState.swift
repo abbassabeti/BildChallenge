@@ -23,7 +23,7 @@ extension AppState {
 }
 
 extension AppState {
-    struct ViewRouting : Equatable {
+    struct ViewRouting: Equatable {
         var usersList = UsersListScene.Routing()
         var userDetails = UserDetailsScene.Routing()
     }
@@ -36,7 +36,7 @@ extension AppState {
     }
 }
 
-func ==(lhs: AppState,rhs: AppState) -> Bool {
+func == (lhs: AppState, rhs: AppState) -> Bool {
     return lhs.usersData == rhs.usersData &&
         lhs.routing == rhs.routing &&
         lhs.system == rhs.system

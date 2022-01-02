@@ -15,19 +15,19 @@ enum Loadable<T> {
     case isLoading(last: T?, cancelBag: CancelBag)
     case loaded(T)
     case failed(Error)
-    
+
     var value: T? {
         switch self {
-            case let .loaded(value): return value
-            case let .isLoading(last, _): return last
-            default: return nil
+        case let .loaded(value): return value
+        case let .isLoading(last, _): return last
+        default: return nil
         }
     }
-    
+
     var error: Error? {
         switch self {
-            case let .failed(error): return error
-            default: return nil
+        case let .failed(error): return error
+        default: return nil
         }
     }
 }
@@ -36,24 +36,24 @@ extension Loadable {
     mutating func setIsLoading(cancelBag: CancelBag) {
         self = .isLoading(last: value, cancelBag: cancelBag)
     }
-    
-    mutating func cancelLoading(){
+
+    mutating func cancelLoading() {
         switch self {
-            case let .isLoading(last, cancelBag):
-                cancelBag.cancel()
-                if let last = last {
-                    self = .loaded(last)
-                }else {
-                    let error = NSError(
-                        domain: NSCocoaErrorDomain, code: NSUserCancelledError,
-                        userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("Canceled by user",
-                                                                                comment: "")])
-                    self = .failed(error)
-                }
-            default: break
+        case let .isLoading(last, cancelBag):
+            cancelBag.cancel()
+            if let last = last {
+                self = .loaded(last)
+            } else {
+                let error = NSError(
+                    domain: NSCocoaErrorDomain, code: NSUserCancelledError,
+                    userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("Canceled by user",
+                                                                            comment: "")])
+                self = .failed(error)
+            }
+        default: break
         }
     }
-    
+
     func map<V>(_ transform: (T) throws -> V) -> Loadable<V> {
         do {
             switch self {

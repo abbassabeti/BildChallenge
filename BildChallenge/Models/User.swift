@@ -11,7 +11,7 @@ struct User: Codable, Equatable {
     let name: String?
     let userId: Int?
     let avatar: URL?
-    
+
     enum CodingKeys: String, CodingKey {
             case name = "login"
             case avatar = "avatar_url"
@@ -20,32 +20,32 @@ struct User: Codable, Equatable {
 }
 
 extension User {
-    struct Details: Codable, Equatable,Hashable {
-        let name : String?
+    struct Details: Codable, Equatable, Hashable {
+        let name: String?
         let userName: String?
         let avatar: URL?
         let publicRepos: Int?
         let followers: Int?
-        
+
         enum CodingKeys: String, CodingKey {
-                case name = "name"
-                case userName = "login"
-                case avatar = "avatar_url"
-                case publicRepos = "public_repos"
-                case followers = "followers"
+            case name = "name"
+            case userName = "login"
+            case avatar = "avatar_url"
+            case publicRepos = "public_repos"
+            case followers = "followers"
         }
     }
 }
 
 extension User {
-    
+
     struct RawList: Codable, Equatable {
         let totalCount: Int
-        let items : [User]
+        let items: [User]
         
         enum CodingKeys: String, CodingKey {
-                case totalCount = "total_count"
-                case items = "items"
+            case totalCount = "total_count"
+            case items = "items"
         }
     }
 }

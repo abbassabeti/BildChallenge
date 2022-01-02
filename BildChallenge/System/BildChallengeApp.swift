@@ -12,7 +12,6 @@ struct BildChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(container: AppEnvironment.bootstrap().container)
-            //ContentView(container: DIContainer.preview)
         }
     }
 }

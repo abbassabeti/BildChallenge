@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct UserCell: View {
-    
+
     let user: User
-    
+
     var body: some View {
-        HStack{
+        HStack {
             AsyncImage(url: user.avatar) { image in
                 image
                     .resizable()
