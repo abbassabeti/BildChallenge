@@ -42,7 +42,6 @@ extension User {
     struct RawList: Codable, Equatable {
         let totalCount: Int
         let items: [User]
-        
         enum CodingKeys: String, CodingKey {
             case totalCount = "total_count"
             case items = "items"

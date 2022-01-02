@@ -18,6 +18,8 @@ struct UsersListScene: View {
     }
     @Environment(\.injected) private var injected: DIContainer
 
+    let inspection = Inspection<Self>()
+
     init(users: Loadable<[User]> = .notRequested) {
         self._users = .init(initialValue: users)
     }
@@ -69,7 +71,10 @@ struct UsersListScene: View {
 
 private extension UsersListScene {
     func reloadUsers() {
-        guard usersSearch.searchText.count > 0 else {return}
+        guard usersSearch.searchText.count > 0 else {
+            users = .notRequested
+            return
+        }
         injected.interactors.usersInteractor
             .refreshUsersList(users: $users, search: usersSearch.searchText)
     }

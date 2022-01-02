@@ -30,12 +30,29 @@
 		052BDCDA277F962F00B9A9B1 /* RootViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052BDCD9277F962F00B9A9B1 /* RootViewModifier.swift */; };
 		052BDCDC277F989200B9A9B1 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052BDCDB277F989200B9A9B1 /* MockedData.swift */; };
 		052BDCDE277FA32B00B9A9B1 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052BDCDD277FA32B00B9A9B1 /* AppEnvironment.swift */; };
+		0562A36327825D2900FF7CC7 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0562A36027825D2900FF7CC7 /* TestHelpers.swift */; };
+		0562A36627825E3800FF7CC7 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 0562A36527825E3800FF7CC7 /* ViewInspector */; };
+		0562A36A27825E9400FF7CC7 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0562A36827825E9400FF7CC7 /* Mocks.swift */; };
+		0562A36B27825E9400FF7CC7 /* MocksInteractors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0562A36927825E9400FF7CC7 /* MocksInteractors.swift */; };
 		058A22CA2780888B0044B8FB /* EnvironmentOverrides in Frameworks */ = {isa = PBXBuildFile; productRef = 058A22C92780888B0044B8FB /* EnvironmentOverrides */; };
+		05CC7535278265F10023ABF8 /* LoadableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CC7534278265F10023ABF8 /* LoadableTests.swift */; };
+		05CC75372782663D0023ABF8 /* HelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CC75362782663D0023ABF8 /* HelpersTests.swift */; };
+		05CC753D278268350023ABF8 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CC753C278268350023ABF8 /* ContentViewTests.swift */; };
 		EDBDB9F6277EFC280016417E /* BildChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBDB9CE277EFC250016417E /* BildChallengeApp.swift */; };
 		EDBDB9F8277EFC280016417E /* UsersListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBDB9CF277EFC250016417E /* UsersListScene.swift */; };
 		EDBDB9FA277EFC280016417E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBDB9D0277EFC280016417E /* Assets.xcassets */; };
 		EDBDBA0B277EFD100016417E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBDBA0A277EFD100016417E /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0562A35927825CF800FF7CC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDBDB9C9277EFC250016417E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDBDB9D4277EFC280016417E;
+			remoteInfo = "BildChallenge (iOS)";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0526FC39278061DE00DB1030 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -64,6 +81,13 @@
 		052BDCDB277F989200B9A9B1 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
 		052BDCDD277FA32B00B9A9B1 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		0562A34E2781EA5500FF7CC7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0562A35527825CF800FF7CC7 /* BildChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BildChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0562A36027825D2900FF7CC7 /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		0562A36827825E9400FF7CC7 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		0562A36927825E9400FF7CC7 /* MocksInteractors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MocksInteractors.swift; sourceTree = "<group>"; };
+		05CC7534278265F10023ABF8 /* LoadableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableTests.swift; sourceTree = "<group>"; };
+		05CC75362782663D0023ABF8 /* HelpersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpersTests.swift; sourceTree = "<group>"; };
+		05CC753C278268350023ABF8 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		EDBDB9CE277EFC250016417E /* BildChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BildChallengeApp.swift; sourceTree = "<group>"; };
 		EDBDB9CF277EFC250016417E /* UsersListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListScene.swift; sourceTree = "<group>"; };
 		EDBDB9D0277EFC280016417E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +96,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0562A35227825CF800FF7CC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0562A36627825E3800FF7CC7 /* ViewInspector in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDBDB9D2277EFC280016417E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,13 +215,59 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		0562A35627825CF800FF7CC7 /* BildChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				05CC753B278268240023ABF8 /* UI */,
+				05CC7533278265DA0023ABF8 /* Utilities */,
+				0562A36727825E6000FF7CC7 /* Mocks */,
+				0562A36027825D2900FF7CC7 /* TestHelpers.swift */,
+			);
+			path = BildChallengeTests;
+			sourceTree = "<group>";
+		};
+		0562A36427825E3700FF7CC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0562A36727825E6000FF7CC7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0562A36827825E9400FF7CC7 /* Mocks.swift */,
+				0562A36927825E9400FF7CC7 /* MocksInteractors.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		05CC7533278265DA0023ABF8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				05CC7534278265F10023ABF8 /* LoadableTests.swift */,
+				05CC75362782663D0023ABF8 /* HelpersTests.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		05CC753B278268240023ABF8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				05CC753C278268350023ABF8 /* ContentViewTests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		EDBDB9C8277EFC250016417E = {
 			isa = PBXGroup;
 			children = (
 				0562A34E2781EA5500FF7CC7 /* README.md */,
 				0526FC45278084F300DB1030 /* Packages */,
 				EDBDB9CD277EFC250016417E /* BildChallenge */,
+				0562A35627825CF800FF7CC7 /* BildChallengeTests */,
 				EDBDB9D6277EFC280016417E /* Products */,
+				0562A36427825E3700FF7CC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				EDBDB9D5277EFC280016417E /* BildChallenge.app */,
+				0562A35527825CF800FF7CC7 /* BildChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +298,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0562A35427825CF800FF7CC7 /* BildChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0562A35D27825CF800FF7CC7 /* Build configuration list for PBXNativeTarget "BildChallengeTests" */;
+			buildPhases = (
+				0562A35127825CF800FF7CC7 /* Sources */,
+				0562A35227825CF800FF7CC7 /* Frameworks */,
+				0562A35327825CF800FF7CC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0562A35A27825CF800FF7CC7 /* PBXTargetDependency */,
+			);
+			name = BildChallengeTests;
+			packageProductDependencies = (
+				0562A36527825E3800FF7CC7 /* ViewInspector */,
+			);
+			productName = BildChallengeTests;
+			productReference = 0562A35527825CF800FF7CC7 /* BildChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EDBDB9D4277EFC280016417E /* BildChallenge (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDBDB9FE277EFC280016417E /* Build configuration list for PBXNativeTarget "BildChallenge (iOS)" */;
@@ -250,6 +350,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					0562A35427825CF800FF7CC7 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = EDBDB9D4277EFC280016417E;
+					};
 					EDBDB9D4277EFC280016417E = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -273,20 +377,38 @@
 			projectRoot = "";
 			targets = (
 				EDBDB9D4277EFC280016417E /* BildChallenge (iOS) */,
+				0562A35427825CF800FF7CC7 /* BildChallengeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0562A35327825CF800FF7CC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDBDB9D3277EFC280016417E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EDBDB9FA277EFC280016417E /* Assets.xcassets in Resources */,
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		0562A3502781EBD600FF7CC7 /* ShellScript */ = {
@@ -309,6 +431,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0562A35127825CF800FF7CC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CC7535278265F10023ABF8 /* LoadableTests.swift in Sources */,
+				0562A36327825D2900FF7CC7 /* TestHelpers.swift in Sources */,
+				0562A36B27825E9400FF7CC7 /* MocksInteractors.swift in Sources */,
+				05CC753D278268350023ABF8 /* ContentViewTests.swift in Sources */,
+				05CC75372782663D0023ABF8 /* HelpersTests.swift in Sources */,
+				0562A36A27825E9400FF7CC7 /* Mocks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDBDB9D1277EFC280016417E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,7 +479,56 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0562A35A27825CF800FF7CC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDBDB9D4277EFC280016417E /* BildChallenge (iOS) */;
+			targetProxy = 0562A35927825CF800FF7CC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0562A35B27825CF800FF7CC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E4YL2MG9YD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.axel.bild.BildChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BildChallenge.app/BildChallenge";
+			};
+			name = Debug;
+		};
+		0562A35C27825CF800FF7CC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E4YL2MG9YD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.axel.bild.BildChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BildChallenge.app/BildChallenge";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		EDBDB9FC277EFC280016417E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -520,6 +704,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0562A35D27825CF800FF7CC7 /* Build configuration list for PBXNativeTarget "BildChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0562A35B27825CF800FF7CC7 /* Debug */,
+				0562A35C27825CF800FF7CC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EDBDB9CC277EFC250016417E /* Build configuration list for PBXProject "BildChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -560,6 +753,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0562A36527825E3800FF7CC7 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ViewInspector;
+		};
 		058A22C92780888B0044B8FB /* EnvironmentOverrides */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 058A22C82780888B0044B8FB /* XCRemoteSwiftPackageReference "EnvironmentOverrides" */;
